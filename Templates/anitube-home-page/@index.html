@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anitube Home</title>
+    <link rel="stylesheet" href="@styles.css">
+</head>
+<body class="background-overlay">
+    <va-body>
+        <va-main>
+            <da-side data-state="open">
+                <va-container class="pl-0" style="width: 320px;">
+                    <va-contain class="pr-0">
+                        <va-logo> <va-span class="d-flex items-center justify-center"><item- class="squircle-16" onclick="toggle_sidebar_view()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a600fb" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path></svg></item-></va-span> <span>anitube</span> </va-logo>
+                        <div id="sidebar-content" class="noselect"> 
+                            <div class="va-spacer"></div>
+                            <div id="sidebar-content-menu"> <span class="all-caps">menu</span> <div class="da-spacer"></div>
+                                <da-tab data-state="active" id="home"> <va-span id="active-tab-label"></va-span> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path></svg></item-> <span>Home</span> </da-tab>
+                                <da-tab data-state="inactive" id="trending"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"></path></svg></item-> <span>Trending</span> </da-tab>
+                                <da-tab data-state="inactive" id="notifications"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"></path></svg></item-> <span>Notifications</span> </da-tab>
+                                <da-tab data-state="inactive" id="bookmark"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9"></path></svg></item-> <span>Bookmark</span> </da-tab>
+                                <da-tab data-state="inactive" id="discussions"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"></path></svg></item-> <span>Discussions</span> </da-tab>
+                            </div>
+                            <div class="va-spacer"></div>
+                            <div id="sidebar-content-library"> <span class="all-caps">library</span> <div class="da-spacer"></div>
+                                <da-tab data-state="inactive" id="history"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path></svg></item-> <span>History</span> </da-tab>
+                                <da-tab data-state="inactive" id="queue"> <item- style="transform: rotate(90deg);"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg></item-> <span>Queue</span> </da-tab>
+                                <da-tab data-state="inactive" id="liked"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path></svg></item-> <span>Liked videos</span> </da-tab>
+                            </div>
+                            <div class="va-spacer"></div>
+                            <div id="sidebar-content-work"> <span class="all-caps">My work</span> <div class="da-spacer"></div>
+                                <da-tab data-state="inactive" id="create"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-2.25-1.313M21 7.5v2.25m0-2.25-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3 2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75 2.25-1.313M12 21.75V19.5m0 2.25-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"></path></svg></item-> <span>Create</span> </da-tab>
+                                <da-tab data-state="inactive" id="creations"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122"></path></svg></item-> <span>Creations</span> </da-tab>
+                                <da-tab data-state="inactive" id="trash"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"></path></svg></item-> <span>Trash</span> </da-tab>
+                            </div>
+                        <div class="pa-spacer"></div></div>
+                    </va-contain>
+                </va-container> 
+                <div class="absolute" flow-y="bottom" z-index="5" style="justify-content: center; display: flex; flex-direction: column; gap: 13px; width: 320px; padding: 10px; align-items: center;">
+                    <div id="upload-vid-tab" class="dtab" data-state="noclick">upload video</div> <span id="app-version">anitube App v<span id="version-number">2.10</span></span>
+                </div>
+                <div class="bottom-preset-shadow"></div> <div id="sidebar-top-shadow"></div>
+            </da-side>
+            <da-main>
+                <va-container>
+                    <va-contain style="padding-top: 0;">
+                        <div class="p-[20px]">
+                            <div id="app-header">
+                                <div class="d-flex items-center justify-space-between">
+                                    <div id="search-box" class="relative" z-index="9">
+                                        <div data-state="inactive" id="search-content" class="absolute"> <textarea id="user-text" data-virtualkeyboard="true" class="d-none"></textarea>
+                                            <div class="d-flex items-center" style="padding: 0 10px;"><span class="d-flex items-center" style="opacity: .6;"><item- id="search-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" width="20" height="20" stroke="currentColor" aria-hidden="true" data-slot="icon"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path></svg></item-> <div class="da-slash" style="opacity: 0;">|</div> <text style="font-size: 14px; width: 50px;">Search</text> </span><p id="prompt-textarea" data-virtualkeyboard="true" contenteditable="true"></p></div>
+                                            <div id="search-suggestions" class="d-none"></div>
+                                        </div>
+                                    </div>
+                                    <div class="relative" style="display: flex; flex-direction: column !important; gap: 9px; user-select: none;"> <div data-state="inactive" id="anituber-profile" name="Damian Andrew" profile-id="12678" anituber-email="damian_admin@gmail.com" img-src="Resources/Gojo Jujutsu.jpg"> <div class="flex"> <span></span> <da-img></da-img> </div> </div>  <div id="profile-menu" class="d-none" data-state="close"> <div class="btab"><item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"></path></svg></item-> <span>personalise</span></div> <div class="btab"><item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path></svg></item-> <span>settings</span> </div> <div class="div"></div> <div id="pm-tab-view" class="ptab"> <span>view profile</span> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg></item-> </div> </div> </div>
+                                </div>
+                            </div>
+                            <div id="app-main-content">
+                                <div id="block-recommended"> <h2>Recommended Videos</h2> <div class="pa-spacer"></div>
+                                    <go-tab data-state="inactive" id="go-left"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg> </go-tab>
+                                    <go-tab data-state="active" id="go-right"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg> </go-tab>
+                                    <div id="recommended-videos">
+                                        <div id="lsh10"></div>
+                                        <div class="d-flex" content overflow="hidden">
+                                            <div class="da-vid"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a600fb" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path></svg></item-> <va-video> <va-img> <img src="Resources/Gojo.jpg"> </va-img> <va-description> <h4>All to know about Satoru Gojo</h4> </va-description> </va-video> </div class="da-vid">
+                                            <div class="da-vid"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a600fb" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path></svg></item-> <va-video> <va-img> <img src="Resources/why the series ended so early.avif"> </va-img> <va-description> <h4>Why the series ended so early</h4> </va-description> </va-video> </div class="da-vid">
+                                            <div class="da-vid"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a600fb" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path></svg></item-> <va-video> <va-img> <img src="Resources/yoriichi-and-muzan-back-to-back.avif"> </va-img> <va-description>25 most strongest characters of Demon Slayer</va-description> </va-video> </div class="da-vid">
+                                            <div class="da-vid"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a600fb" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path></svg></item-> <va-video> <va-img> <img src="Resources/8a68e967-32c1-46e6-a2c4-ba68d57143bd-1.avif"> </va-img> <va-description>Will Saturo Gojo be back in season 3</va-description> </va-video> </div class="da-vid">
+                                            <div class="da-vid"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a600fb" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path></svg></item-> <va-video> <va-img> <img src="Resources/116859123.webp"> </va-img> <va-description>Momo Ayase character traits</va-description> </va-video> </div class="da-vid">
+                                            <div class="da-vid"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a600fb" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path></svg></item-> <va-video> <va-img> <img src="Resources/solo-leveling-igris-hd-wallpaper-preview.jpg"> </va-img> <va-description>Who was Igris before becoming the commander of Jin Hoo's shadow army</va-description> </va-video> </div>
+                                            <div class="da-vid"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a600fb" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path></svg></item-> <va-video> <va-img> <img src="Resources/jujutsu-kaisen-saison-3.webp"> </va-img> <va-description>Satoru Gojo Sees his fate in season 2</va-description> </va-video> </div>
+                                            <div class="da-vid"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a600fb" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path></svg></item-> <va-video> <va-img> <img src="Resources/yuji-itadori-en-el-primer-opening-de-jujutsu-kaisen.webp"> </va-img> <va-description>Will there be a season 3 of Jujutsu Kaisen</va-description> </va-video> </div>
+                                            
+                                        </div>
+                                        <div id="rsh10"></div>
+                                    </div>
+                                </div>  <div class="va-spacer"></div>
+                                <div class="d-flex">
+                                    <div id="block-popular"> <h2>Popular Channels</h2> <div class="da-spacer"></div>
+                                        <div overflow="hidden" overflow-y="auto" style="padding: 20px; min-height: 55px; height: 200px; position: relative;"> <div id="shader"></div>
+                                        <div id="popular-channels">
+                                            <div class="da-block"><div class="channel-link" data-state="pointer-out" first><desc><va-img></va-img><name>Jujutsu Kaisen</name><span subscribers="13M"></span><span videos="1,523"></span></desc> <div class="dtab">view</div> <channel-info display="none" img="Resources/6f91a33c-2bcf-4cb5-b450-067b89137759.jpg" name="Jujutsu Kaisen" rank="S" comments="10,200" likes="4,200" dislikes="580" seasons="2" view="all" view-restrict="" tags="action, dark fantasy, supernatural, horror, tragic" chars="yuji itadori, megumi fushiguro, nobara kugisaki, satoru gojo, suguru geto, ryomen sukuna, toji fushiguro, kento nanami, maki zenin, toge inumaki"></channel-info> </div></div>
+                                            <div class="da-block"><div class="channel-link" data-state="pointer-out"><desc><va-img></va-img><name>Demon Slayer</name><span subscribers="10,2M"></span><span videos="1,476"></span></desc> <div class="dtab">view</div> <channel-info display="none" img="Resources/ed02e544-5f28-41f4-afbd-f8b653a8ac4c.jpg" name="Demon Slayer (Kimetsu No Yaiba)" rank="S" comments="11,100" likes="4,320" dislikes="530" seasons="4" view="all" view-restrict="" tags="action, dark fantasy, supernatural, historical, classic shönen, demon-hunting, emotional, dramatic" chars="tanjiro kamado, nezuko kamado, zenitsu agatsuma, inosuke hashibira, kanao tsuyuri, mitsuri kanroji, obanai iguro, kokushibo, akaza, muzan kibutsuji"></channel-info> </div></div>
+                                            <div class="da-block"><div class="channel-link" data-state="pointer-out"><desc><va-img></va-img><name>Solo Leveling</name><span subscribers="8,3M"></span><span videos="1,430"></span></desc> <div class="dtab">view</div> <channel-info display="none" img="Resources/0f2eba2b-ab1e-42f4-bdf8-38367a772ad1.jpg" name="Solo leveling" rank="A" comments="9,200" likes="3,700" dislikes="570" seasons="2" view="all" view-restrict="" tags="action, fantasy, supernatural, adventure, epic, dungeon" chars="sung jin hoo, cha hae in, go gun hee, yoo jin ho, baek yoon ho, choi jong in, thomas andre, beru, igris"></channel-info> </div></div>
+                                            <div class="da-block"><div class="channel-link" data-state="pointer-out"><desc><va-img></va-img><name>Naruto Shippuden</name><span subscribers="8,1M"></span><span videos="1,116"></span></desc> <div class="dtab">view</div> <channel-info display="none" img="Resources/9be74f68-b603-48cf-ab75-4c792b24d4c5.jpg" name="Naruto Shippuden" rank="A" comments="8,520" likes="3,580" dislikes="650" seasons="23" view="all" view-restrict="" tags="action, ninjas, supernatural, fantasy, historical" chars="naruto uzumaki, minato, sasuke uchiwa, hinata, sakura, kakashi, neiji, kamado, madara uchiwa, kyubi, ashibi"></channel-info> </div></div>
+                                            <div class="da-block"><div class="channel-link" data-state="pointer-out"><desc><va-img></va-img><name>Dandadan</name><span subscribers="9,4M"></span><span videos="1,003"></span></desc> <div class="dtab">view</div> <channel-info display="none" img="Resources/f6b5aedb-d87f-43f1-8a12-ba338d806e06.jpg" name="Dandadan" rank="B" comments="6,200" likes="3,300" dislikes="620" seasons="2" view="restrict" view-restrict="12+" tags="action, comedy, supernatural, romance, paranormal shönen, chaotic" chars="momo ayase, ken takakura, jiji, turbo granny, serpo alien, aira shiratori, erosuke, karasu tengu"></channel-info> </div></div>
+                                            <div class="da-block"><div class="channel-link" data-state="pointer-out" last><desc><va-img></va-img><name>Bunny Girl Senpai</name><span subscribers="8,6M"></span><span videos="980"></span></desc> <div class="dtab">view</div> <channel-info display="none" img="Resources/mai-sakurajima.jpg" name="Rascal Does Not Dream Of Bunny Girl Senpai" comments="3,200" rank="C" likes="3,120" dislikes="730" seasons="2" view="all" view-restrict="" tags="romance, psychological, slice-of-life, drama, supernatural, emotional" chars="sakuta azusagawa, mai sakurajima, kaede azusagawa, tomoe koga, rio futaba, nodoka toyohama, shoko makinohara, yuma kunimi, saki kamisato"></channel-info></div></div>
+                                        </div>
+                                        </div>
+                                         
+                                    </div>
+                                    <div id="block-mixes"> <h2>Anitube Mixes</h2> <div class="da-spacer"></div>
+                                        <div overflow="hidden" overflow-y="auto" style="padding: 20px; padding-left: 0; min-height: 55px; height: 200px;">
+                                            <div id="anitube-mixes">
+                                                <div class="da-block"> <img src="Resources/ep_ 7dandadan.jpg"> <div class="ab-block"><span>Dandadan</span> <div class="blur"><span>+50</span></div></div> </div>
+                                                <div class="da-block"> <img src="Resources/JJK mixe.jpg"> <div class="ab-block"><span>Jujutsu Kaisen</span> <div class="blur"><span>+70</span></div></div> </div>
+                                                <div class="da-block"> <img src="Resources/79be9898-8476-4ab6-abfe-78d9cd14e479.jpg"> <div class="ab-block"><span>Naruto Shippuden</span> <div class="blur"><span>+100</span></div></div> </div>
+                                                <div class="da-block"> <img src="Resources/K4YOQAMh-fond-decran-Solo-Leveling-55.webp"> <div class="ab-block"><span>Solo Leveling</span> <div class="blur">+60</div></div> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </va-contain>
+                </va-container>
+            </da-main>
+        </va-main>
+    </va-body>
+    <div id="popup-container" class="popup-container" data-state="inactive" z-index="-5">
+        <channel-popup data-state="close">
+            <div class="d-flex">
+                <ch-block id="img-block"><img src=""></ch-block>
+                <ch-block id="content-block">
+                    <va-container>
+                        <div class="da-block">
+                            <div class="top-block-actions"> <div id="tba1"> <span class="mtab">Channel</span> <span class="mtab">Characters</span> <span class="mtab">Studio</span> <span class="mtab">Videos</span> <span class="mtab">Pictures</span> </div> <div id="tba2"> <div class="mtab">Sign Up</div> </div> </div> <div class="da-spacer"></div>
+                            <div class="d-flex" overflow="hidden">
+                                <div id="chdb1"> <div id="rank-info"> <span id="rank"></span> <span>rank</span> </div>
+                                    <h2 id="anime-name"></h2>
+                                    <div id="tabs">
+                                        <div class="chblock"> <div class="chb1"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff00ff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"></path></svg></item->  <span id="community-count"></span> </div> <b>subscribers</b> </div>
+                                        <div class="chblock"> <div class="chb1"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff00ff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"></path> <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"></path></svg></item-> <span id="uploaded-videos"></span> </div> <b>fan made videos</b> </div>
+                                        <div class="chblock"> <div class="chb1"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff00ff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"></path></svg></item-> <span id="comments-posted"></span> </div> <b>comments</b> </div>
+                                        <div class="chblock"> <div class="chb1"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff00ff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0 1 18 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m1.5-3.75C5.496 8.25 6 7.746 6 7.125v-1.5M4.875 8.25C5.496 8.25 6 8.754 6 9.375v1.5m0-5.25v5.25m0-5.25C6 5.004 6.504 4.5 7.125 4.5h9.75c.621 0 1.125.504 1.125 1.125m1.125 2.625h1.5m-1.5 0A1.125 1.125 0 0 1 18 7.125v-1.5m1.125 2.625c-.621 0-1.125.504-1.125 1.125v1.5m2.625-2.625c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M18 5.625v5.25M7.125 12h9.75m-9.75 0A1.125 1.125 0 0 1 6 10.875M7.125 12C6.504 12 6 12.504 6 13.125m0-2.25C6 11.496 5.496 12 4.875 12M18 10.875c0 .621-.504 1.125-1.125 1.125M18 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m-12 5.25v-5.25m0 5.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125m-12 0v-1.5c0-.621-.504-1.125-1.125-1.125M18 18.375v-5.25m0 5.25v-1.5c0-.621.504-1.125 1.125-1.125M18 13.125v1.5c0 .621.504 1.125 1.125 1.125M18 13.125c0-.621.504-1.125 1.125-1.125M6 13.125v1.5c0 .621-.504 1.125-1.125 1.125M6 13.125C6 12.504 5.496 12 4.875 12m-1.5 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M19.125 12h1.5m0 0c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h1.5m14.25 0h1.5"></path></svg></item-> <span id="seasons-available"></span> </div> <b>seasons available</b> </div>
+                                    </div>
+                                    <div id="labels">
+                                        <span rate> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff00ff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"></path></svg></item-> <span id="n-likes"></span> </span>
+                                        <span rate> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff00ff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M7.498 15.25H4.372c-1.026 0-1.945-.694-2.054-1.715a12.137 12.137 0 0 1-.068-1.285c0-2.848.992-5.464 2.649-7.521C5.287 4.247 5.886 4 6.504 4h4.016a4.5 4.5 0 0 1 1.423.23l3.114 1.04a4.5 4.5 0 0 0 1.423.23h1.294M7.498 15.25c.618 0 .991.724.725 1.282A7.471 7.471 0 0 0 7.5 19.75 2.25 2.25 0 0 0 9.75 22a.75.75 0 0 0 .75-.75v-.633c0-.573.11-1.14.322-1.672.304-.76.93-1.33 1.653-1.715a9.04 9.04 0 0 0 2.86-2.4c.498-.634 1.226-1.08 2.032-1.08h.384m-10.253 1.5H9.7m8.075-9.75c.01.05.027.1.05.148.593 1.2.925 2.55.925 3.977 0 1.487-.36 2.89-.999 4.125m.023-8.25c-.076-.365.183-.75.575-.75h.908c.889 0 1.713.518 1.972 1.368.339 1.11.521 2.287.521 3.507 0 1.553-.295 3.036-.831 4.398-.306.774-1.086 1.227-1.918 1.227h-1.053c-.472 0-.745-.556-.5-.96a8.95 8.95 0 0 0 .303-.54"></path></svg></item-> <span id="n-dislikes"></span> </span>
+                                        <span view> <span class="svg"></span> <span id="view-info"></span> </span>
+                                        <span> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff00ff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"></path></svg></item-> </span>
+                                    </div>
+                                    <div id="tag-block">
+                                        <div class="fb-1"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="size-6"><path d="M7.7 14.05a.751.751 0 0 1-.53-1.281l4.766-4.767a.75.75 0 0 1 1.061 1.061L8.23 13.831a.748.748 0 0 1-.53.219Zm2.2 2.1a.751.751 0 0 1-.53-1.281l2.587-2.587a.75.75 0 1 1 1.061 1.061L10.43 15.93a.742.742 0 0 1-.53.22Z" fill="currentColor"></path><path d="M17.9 4.5c.869 0 1.5.631 1.5 1.5v4.693c-.008.166-.158.535-.261.646l-7.9 7.9a.484.484 0 0 1-.339.161.484.484 0 0 1-.339-.161l-5.935-5.935-.038-.033c-.068-.06-.085-.152-.088-.218a.535.535 0 0 1 .16-.392l7.898-7.898c.113-.105.483-.255.642-.263h4.7Zm0-1.5h-4.7c-.5 0-1.3.3-1.7.7l-7.9 7.9c-.8.8-.8 2.1 0 2.8l5.9 5.9c.4.4.9.6 1.4.6.5 0 1-.2 1.4-.6l7.9-7.9c.4-.4.7-1.2.7-1.7V6c0-1.7-1.3-3-3-3Z" fill="#ff00ff"></path><path d="M18 7c0 .6-.4 1-1 1s-1-.4-1-1 .4-1 1-1 1 .5 1 1Z" fill="#ff00ff"></path></svg></item-> </div>
+                                        <div id="tags"></div>
+                                    </div>
+                                    <div id="characters-block">
+                                        <div class="fb-1"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff00ff" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75H6A2.25 2.25 0 0 0 3.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0 1 20.25 6v1.5m0 9V18A2.25 2.25 0 0 1 18 20.25h-1.5m-9 0H6A2.25 2.25 0 0 1 3.75 18v-1.5M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path></svg></item-> </div>
+                                        <div id="characters"></div>
+                                    </div>
+                                </div>
+                                <div id="chdb2"></div>
+                            </div>
+                        </div>
+                    </va-container>
+                </ch-block>
+            </div>
+        </channel-popup>
+        <profile-popup data-state="close">
+            <div id="profile-block" class="d-flex">
+                <div id="pb10">
+                    <div id="pb10pose"> <va-img></va-img> <div id="uinfo"> <span id="u-name"></span> <span id="u-id"></span> </div> </div>
+                    <div id="pb10con">
+                        <div id="u-settings">
+                            <div id="con10">
+                                <div class="btab"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"></path></svg></item-> <span>personalise</span> </div>
+                                <div class="btab"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"></path></svg></item-> <span>add a profile</span> </div>
+                                <div class="btab"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path></svg></item-> <span>guest mode</span> </div>
+                                <div class="btab"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path></svg></item-> <span>messages</span> </div>
+                                <div class="btab"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"></path></svg></item-> <span>rewards</span> </div>
+                                <div class="btab"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path></svg></item-> <span>badges</span> </div>
+                                <div class="btab"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"></path></svg></item-> <span>invite friend</span> </div>
+                                <div class="btab"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path></svg></item-> <span>settings</span> </div>
+                                <div class="btab"> <item-><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"></path></svg></item-> <span>sign out</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="pb20">
+                    <div id="pb20con--1" contains-blocks>
+                        <div style="display: flex; justify-content: space-between;"> <div style="display: flex; flex-direction: column !important; gap: 10px;"> <item- style="width: 340px;" class="list" title="info"></item-> <item- style="width: 230px;" class="list" title="info"></item-> <item- style="width: 190px;" class="list" title="info"></item-> </div> <div style="display: flex; flex-direction: column !important; gap: 10px; margin-right: 30px;"> <item- style="width: 140px; height: 70px;" title="any"></item-> <item- class="list" style="width: 140px;" title="any"></item-> </div> </div> <h3>Creations</h3>
+                        <div style="display: flex; gap: 10px; width: fit-content;" class="row-tight"> <item- unactive clickable title="content"></item-> <item- unactive clickable title="content"></item-> <item- active clickable title="content"></item-> <item- unactive clickable title="content"></item-> <item- unactive clickable title="content"></item-> <div class="d-flex" style="align-items: center; justify-content: center; gap: 10px; flex-direction: column !important;"> <item- class="smround" clickable title="go right"></item-> <item- class="smround" clickable title="go left"></item-> </div> </div>
+                        <div style="display: flex; gap: 20px; margin-top: 25px;"> <item- class="lground" title="statistics"></item-> <div class="d-flex" style="flex-direction: column !important; gap: 20px; justify-content: center;"> <item- class="list" style="margin-left: -14px;" title="stats"></item-> <item- class="list" title="stats"></item-> <item- class="list" style="margin-left: -14px;" title="stats"></item-> </div> <div style="display: flex; flex-direction: column !important; gap: 10px; margin-left: 50px;"> <div class="d-flex"> <item- class="list mr-10px"></item-> <item- class="list" style="width: 100px;"></item-> </div> <div class="d-flex"> <item- class="list mr-10px" style="width: 75px;"></item-> <item- class="list mr-10px" style="width: 65px;"></item-> <item- class="list" style="width: 100px;"></item-> </div> <div class="d-flex"> <item- class="list mr-10px" style="width: 75px;"></item-> <item- class="list" style="width: 175px;"></item-> </div> <div class="d-flex" style="margin-top: 20px; gap: 15px;"> <item- class="smround" clickable title="face your book"></item-> <item- class="smround" clickable title="social"></item-> <item- class="smround" clickable title="social"></item-> <item- class="smround" clickable title="social"></item-> </div> </div> </div>
+                        <div style="margin-top: 10px; display: flex; flex-direction: column !important; gap: 10px;"> <item- class="list" title="any"></item-> <item- class="list" title="any"></item-> </div>
+                    </div>
+                </div>
+            </div>
+        </profile-popup>
+    </div>
+    <script>
+        // Wait for DOM
+        document.addEventListener('DOMContentLoaded', () => {
+          const searchBox = document.getElementById('search-box');
+          const searchContent = document.getElementById('search-content');
+          const promptTextarea = document.getElementById('prompt-textarea');
+          const hiddenTextarea = document.getElementById('user-text');
+          const suggestions = document.getElementById('search-suggestions');
+          const searchIcon = document.getElementById('search-icon');
+
+          // Activate on click/focus
+          function activate_search_content() {
+            searchContent.setAttribute('data-state', 'active');
+            // make sure content area is visible
+            searchContent.style.visibility = 'visible';
+            // show suggestions placeholder if you want
+            suggestions.classList.remove('d-none');
+            searchIcon.parentElement.querySelector('text').style.width = 0;
+            searchIcon.parentElement.querySelector('.da-slash').style.opacity = 1;
+          }
+      
+          // Deactivate on outside click
+          function deactivate_search_content() {
+            searchContent.setAttribute('data-state', 'inactive');
+            suggestions.classList.add('d-none');
+            searchIcon.parentElement.querySelector('text').style.width = '50px';
+            searchIcon.parentElement.querySelector('.da-slash').style.opacity = 0;
+          }
+      
+          // Sync contenteditable -> textarea
+          promptTextarea.addEventListener('input', () => {
+            hiddenTextarea.textContent = promptTextarea.textContent;
+            // optional: update suggestions here based on content
+            if (promptTextarea.textContent.trim()) {
+              suggestions.classList.remove('d-none');
+            } else {
+              suggestions.classList.add('d-none');
+            }
+          });
+      
+          // Click or focus on the prompt activates
+          promptTextarea.addEventListener('focus', activate_search_content);
+          promptTextarea.addEventListener('keydown', (e) => {switch(e.key) {case 'Enter': e.preventDefault(); /* Remember to modify code for searching over a network here */ }});
+          searchContent.addEventListener('click', () => {activate_search_content(); promptTextarea.focus()});
+      
+          // Anywhere else click listener
+          document.addEventListener('click', (e) => {
+            if (!searchBox.contains(e.target)) {
+              deactivate_search_content();
+              // optionally blur the prompt
+              promptTextarea.blur();
+            }
+          });
+      
+          // Optional: handle ESC key to close
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              deactivate_search_content();
+              promptTextarea.blur();
+            }
+          });
+        });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const PROMPT = document.getElementById('prompt-textarea');
+    const HIDDEN = document.getElementById('user-text');
+    const SUGGEST = document.getElementById('search-suggestions');
+
+    // 1. Utility to read/write history
+    function getHistory() {
+        return JSON.parse(localStorage.getItem('searchHistory') || '[]');
+    }
+    function setHistory(arr) {
+        localStorage.setItem('searchHistory', JSON.stringify(arr));
+    }
+
+    // 2. Build suggestions based on current input
+    function buildSuggestions() {
+        const query = PROMPT.textContent.trim().toLowerCase();
+        const history = getHistory();
+        // filter
+        const matches = query ? history.filter(item => String(item).toLowerCase().startsWith(query)) : history.slice(); // show all if empty
+        // clear
+        SUGGEST.innerHTML = '';
+        if (matches.length === 0) {
+            SUGGEST.classList.add('d-none'); return;
+        }
+        // populate
+        matches.forEach(item => {
+            const row = document.createElement('da-tab');
+            row.className = 'suggestion';
+            // text
+            const txt = document.createElement('span');
+            txt.textContent = item;
+            // delete button
+            const del = document.createElement('button');
+            del.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.63603 5.63604C6.02656 5.24552 6.65972 5.24552 7.05025 5.63604L12 10.5858L16.9497 5.63604C17.3403 5.24552 17.9734 5.24552 18.364 5.63604C18.7545 6.02657 18.7545 6.65973 18.364 7.05025L13.4142 12L18.364 16.9497C18.7545 17.3403 18.7545 17.9734 18.364 18.364C17.9734 18.7545 17.3403 18.7545 16.9497 18.364L12 13.4142L7.05025 18.364C6.65972 18.7545 6.02656 18.7545 5.63603 18.364C5.24551 17.9734 5.24551 17.3403 5.63603 16.9497L10.5858 12L5.63603 7.05025C5.24551 6.65973 5.24551 6.02657 5.63603 5.63604Z" fill="#fff"></path></svg>`;
+            del.className = 'da-delete';
+            del.addEventListener('click', e => {
+                e.stopPropagation();
+                const newHistory = getHistory().filter(h => h !== item);
+                setHistory(newHistory);
+                buildSuggestions();
+            });
+            // click to select
+            row.addEventListener('click', () => {PROMPT.textContent = item; HIDDEN.textContent = item; buildSuggestions();});
+            row.append(txt, del);
+            SUGGEST.appendChild(row);
+        });
+    }
+
+    // 3. Handle typing (input on contenteditable)
+    PROMPT.addEventListener('input', () => {
+        HIDDEN.textContent = PROMPT.textContent;
+        buildSuggestions(); let i = document.getElementById('search-icon');
+    });
+
+    // 4. Handle Enter to save
+    PROMPT.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const val = PROMPT.textContent.trim();
+            if (!val) return;
+            const history = getHistory();
+            if (!history.includes(val)) {
+                history.push(val);
+                setHistory(history);
+            }
+            buildSuggestions();
+        }
+    });
+
+    // 5. Clicking outside hides suggestions
+    document.addEventListener('click', e => {if (!document.getElementById('search-box').contains(e.target)) {SUGGEST.classList.add('d-none');} else {SUGGEST.classList.remove('d-none');}});
+    // initialize
+    buildSuggestions(); SUGGEST.firstChild.remove();
+});
+
+    </script>
+    <script src="@scripts.js"></script>
+</body>
+    <!-- Powered by DrewIt -->
+</html>
