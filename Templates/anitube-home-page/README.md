@@ -28,7 +28,7 @@ Download or clone the repository, then open `@index.html` in your browser.
 No build step or dependencies—just static files.
 
 ```
-git clone https://github.com/drewIt273/Templates.git/anitube-home-page/@index.html
+git clone https://github.com/drewIt273/Templates/tree/main/Templates/anitube-home-page/@index.html
 # Open @index.html with your browser
 ```
 
