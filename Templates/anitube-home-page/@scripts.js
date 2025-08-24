@@ -14,7 +14,21 @@ const profile_view = web_app.getElementById('anituber-profile');
 const profile_popup = web_app.querySelector('profile-popup');
 const profile_menu = web_app.getElementById('profile-menu');
 
-class div extends HTMLDivElement {constructor() {return web_app.createElement('div')}} class span extends HTMLSpanElement {constructor() {return web_app.createElement('span')}} class element extends HTMLElement {constructor(e) {return web_app.createElement(e)}}
+class div extends HTMLDivElement {
+    constructor() {
+        return web_app.createElement('div')
+    }
+} 
+class span extends HTMLSpanElement {
+    constructor() {
+        return web_app.createElement('span')
+    }
+} 
+class element extends HTMLElement {
+    constructor(e) {
+        return web_app.createElement(e)
+    }
+}
 web_app.addEventListener("DOMContentLoaded", () => {
     let spn = profile_view.querySelector('span'); spn.textContent = profile_view.getAttribute('name'); let imgc = profile_view.querySelector('da-img'); imgc.innerHTML = `<img src="${profile_view.getAttribute('img-src')}">`;
 })
@@ -30,7 +44,6 @@ web_app.addEventListener("DOMContentLoaded", () => {
     }
 
     /**
-     * 
      * @param {HTMLElement} elem 
      * @param {"top" | "bottom" | "left" | "right"} side 
      * @param {any} content 
